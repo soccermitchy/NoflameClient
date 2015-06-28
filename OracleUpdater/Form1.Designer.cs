@@ -46,6 +46,7 @@
             this.portsLabel = new System.Windows.Forms.Label();
             this.storeCredsCheckBox = new System.Windows.Forms.CheckBox();
             this.legacyCheck = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // userTxt
@@ -123,7 +124,7 @@
             this.registerBtn.BackColor = System.Drawing.Color.Transparent;
             this.registerBtn.FlatAppearance.BorderSize = 4;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerBtn.Location = new System.Drawing.Point(556, 417);
+            this.registerBtn.Location = new System.Drawing.Point(649, 417);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(109, 33);
             this.registerBtn.TabIndex = 5;
@@ -158,7 +159,7 @@
             this.updateBtn.BackColor = System.Drawing.Color.Transparent;
             this.updateBtn.FlatAppearance.BorderSize = 4;
             this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(15, 417);
+            this.updateBtn.Location = new System.Drawing.Point(463, 417);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(109, 33);
             this.updateBtn.TabIndex = 9;
@@ -173,9 +174,7 @@
             this.serverSelectionComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverSelectionComboBox.FormattingEnabled = true;
             this.serverSelectionComboBox.Items.AddRange(new object[] {
-            "Quentin (EU)",
-            "Sinon (US West)",
-            "Eugeo (US East)"});
+            "US East 2"});
             this.serverSelectionComboBox.Location = new System.Drawing.Point(463, 241);
             this.serverSelectionComboBox.Name = "serverSelectionComboBox";
             this.serverSelectionComboBox.Size = new System.Drawing.Size(295, 25);
@@ -257,13 +256,27 @@
             this.legacyCheck.Text = "Legacy Mode";
             this.legacyCheck.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.GreenYellow;
+            this.label4.Location = new System.Drawing.Point(13, 427);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(197, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Services provided by The Catering Guild";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 462);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.legacyCheck);
             this.Controls.Add(this.storeCredsCheckBox);
             this.Controls.Add(this.portsLabel);
@@ -284,7 +297,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Client";
-            this.Text = "OracleNet Client";
+            this.Text = "nofla.me VPN Client";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +322,7 @@
         private System.Windows.Forms.Label portsLabel;
         private System.Windows.Forms.CheckBox storeCredsCheckBox;
         private System.Windows.Forms.CheckBox legacyCheck;
+        private System.Windows.Forms.Label label4;
     }
 }
 

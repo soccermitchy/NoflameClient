@@ -43,15 +43,15 @@ namespace OracleUpdater
         static readonly string viKey = "REDACTED"; // 16 Characters
 
         private string registrationURL = "REDACTED";
-        private string versionCheckURL = "REDACTED";
+        private string versionCheckURL = "http://thecateringguild.com/VERSION";
 
         private int selectedServer;
 
         Server[] servers = new Server[]
         {
-            new Server("REDACTED", "Quentin (EU)"),
-            new Server("REDACTED", "Sinon (US West)"),
-            new Server("REDACTED", "Eugeo (US East)")
+            new Server("167.114.33.245", "US East 2"),
+            //new Server("REDACTED", "Sinon (US West)"),
+            //new Server("REDACTED", "Eugeo (US East)")
         };
 
         /* VPN */
@@ -178,8 +178,8 @@ namespace OracleUpdater
             {
                 if (legacyCheck.Checked)
                 {
-                    this.userName = "REDACTED";
-                    this.passWord = "REDACTED";
+                    this.userName = "halo";
+                    this.passWord = "halo";
                 }
                 else
                 {
@@ -193,7 +193,7 @@ namespace OracleUpdater
                 currentVPN.PhoneBookPath = path;
                 currentVPN.Credentials = new System.Net.NetworkCredential(this.userName, this.passWord);
                 currentVPN.AutoUpdateCredentials = RasUpdateCredential.User;
-                currentVPN.AllowUseStoredCredentials = true;
+                currentVPN.AllowUseStoredCredentials = false;
                 currentVPN.Timeout = 10000;
 
                 currentVPN.DialAsync();
@@ -222,7 +222,7 @@ namespace OracleUpdater
             else if (e.TimedOut)
             {
                 connectionErrorLabel.ForeColor = Color.Red;
-                connectionErrorLabel.Text = "Error: Timed Out";
+                connectionErrorLabel.Text = "Error: Timed Out.";
                 loginBTN.Text = "Login";
                 loginBTN.Enabled = true;
                 currentVPN.DialCompleted -= DialCompleted;
@@ -258,11 +258,11 @@ namespace OracleUpdater
 
 
                 //Switch Window Title to Connected
-                this.Text = string.Format("OracleNet Client : Connected - {0}", GetOracleIP());
+                this.Text = string.Format("NoFlame VPN Client : Connected - {0}", GetOracleIP());
                 
                 //Show MessageBox
                // if (MessageBox.Show("Proceed?", "Confirm", MessageBoxButtons.ok))
-                MessageBox.Show("Connected! Launch ElDewrito Now!", "Success!", MessageBoxButtons.OK);
+                MessageBox.Show("Connected! Launch your games now!", "Success!", MessageBoxButtons.OK);
                 currentVPN.DialCompleted -= DialCompleted;
             }
             else if(e.Error != null)
@@ -291,7 +291,7 @@ namespace OracleUpdater
             disconnectBtn.Hide();
 
             //Set Window Title
-            this.Text = "OracleNet Client";
+            this.Text = "NoFlame VPN Client";
         }
 
         private void HangUpAllCalls()
@@ -313,7 +313,7 @@ namespace OracleUpdater
         {
             string newVersion = "1.3.0.0"; //Get This from the server
 
-            string clientVersion = AssemblyName.GetAssemblyName("OracleLauncher.exe").Version.ToString();
+            string clientVersion = AssemblyName.GetAssemblyName("NoflameLauncher.exe").Version.ToString();
 
             //Reenable once version.txt is available.
             using (WebClient vs = new WebClient())
@@ -381,21 +381,21 @@ namespace OracleUpdater
             INetFwOpenPort openPort = null;
             try
             {
-                if (CheckOracleAllowed("OracleLauncher") == false)
+                if (CheckOracleAllowed("NoflameLauncher") == false)
                 {
                     firewallLabel.ForeColor = Color.Red;
-                    firewallLabel.Text = "Firewall: Adding OracleNet";
+                    firewallLabel.Text = "Firewall: Adding NoFlame VPN";
 
                     SetFirewallProfile();
                     allowedApps = fireWallProfile.AuthorizedApplications;
                     allowedApp = GetFirewallInstance("INetAuthApp") as INetFwAuthorizedApplication;
                     allowedApp.ProcessImageFileName = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                    allowedApp.Name = "OracleNetClient";
+                    allowedApp.Name = "NoflameClient";
                     allowedApps.Add(allowedApp);
                 }
 
                 //Double Check App
-                if (CheckOracleAllowed("OracleNetClient") == true)
+                if (CheckOracleAllowed("NoflameClient") == true)
                 {
                     //FIREWALLTXT UPDATE
                     firewallLabel.ForeColor = Color.Cyan;
@@ -698,7 +698,10 @@ namespace OracleUpdater
             disconnectBtn.Enabled = false;
             Disconnect();
         }
-
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://thecateringguild.com");
+        }
         /* ------------ NOT USED, VS PREGEN ------------  */
 
         private void label2_Click(object sender, EventArgs e)
