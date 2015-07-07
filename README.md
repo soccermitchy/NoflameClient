@@ -1,3 +1,4 @@
-# OracleNetClient
+# NoFlame Client
 
-The main OracleNet Client
+The main NoFlame Client
+Based on OracleNet
