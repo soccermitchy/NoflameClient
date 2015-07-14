@@ -294,10 +294,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passTxt);
             this.Controls.Add(this.userTxt);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Client";
             this.Text = "nofla.me VPN Client";
+            this.Load += new System.EventHandler(this.Client_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,0 +1,14 @@
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.csprojResolveAssemblyReference.cache
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\MainWindow.g.cs
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\App.g.cs
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\MainWindow.baml
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.csproj.GenerateResource.Cache
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\bin\Debug\NoFlameClient.exe.config
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\bin\Debug\NoFlameClient.exe
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\bin\Debug\NoFlameClient.pdb
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient_MarkupCompile.cache
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient_MarkupCompile.lref
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.g.resources
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.Properties.Resources.resources
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.exe
+D:\Users\Caspar\Documents\GitHub\NoflameClient\WpfApplication1\obj\Debug\NoFlameClient.pdb

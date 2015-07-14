@@ -727,5 +727,10 @@ namespace OracleUpdater
         private void Client_Load(object sender, EventArgs e)
         {
         }
+
+        private void Client_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
